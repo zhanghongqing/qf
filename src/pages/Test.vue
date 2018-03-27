@@ -1,20 +1,16 @@
 <template>
   <div id="index">
-    <div class="body" :style="{ height: bodyHegiht }">
-      <TabNav />
-    </div>
+    <text>123141241</text>
   </div>
 </template>
 
 <script>
-  import TabNav from '../components/TabNav.vue'
-  import QfHeader from '../components/QfHeader.vue'
   import { Utils } from 'weex-ui';
   export default {
     data: () => ({
       bodyHegiht: '0px'
     }),
-    components: { TabNav, QfHeader, Utils },
+    components: { Utils },
     created () {
       const tabPageHeight = Utils.env.getPageHeight();
       console.log(tabPageHeight, Utils.env.getScreenHeight())
@@ -31,5 +27,5 @@
 
 
 <style lang="scss">
-  @import './index.scss'
+
 </style>
