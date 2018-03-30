@@ -6,7 +6,8 @@
     <!-- 第一个页面内容-->
     <div class="item-container" @click="jump" :style="contentStyle">
       <text>{{index}}</text>
-      <div class="btn" @click="jump">跳转</div>
+      <div class="btn" @click="jump">跳转啊</div>
+      <a href="/dist/pages/Test.web.js"><text>跳跳</text></a>
     </div>
 
     <!-- 第二个页面内容-->
@@ -43,7 +44,7 @@
     },
     methods: {
       jump () {
-        var params = {'url': 'pages/Test','animated':'true'}
+        var params = {'url': '/dist/pages/Test.js','animated':'true'}
         navigator.push(params, function(e) {
           console.log('i am the callback.')
         });
